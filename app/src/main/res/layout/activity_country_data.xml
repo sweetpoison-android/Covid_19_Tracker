@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CountryData">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/countrydata_edittextsearch"
+        android:drawableLeft="@drawable/ic_baseline_search_24"
+        android:hint="Search Here"
+        android:textSize="17sp"
+        android:drawablePadding="10dp"
+        android:layout_margin="5dp"
+        android:background="@drawable/border"
+        android:padding="5dp"
+        android:imeOptions="actionSearch"/>
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:id="@+id/countrydata_textviewcountry"
+      android:layout_below="@id/countrydata_edittextsearch"
+      android:text="COUNTRY"
+      android:textSize="18sp"
+      android:textColor="@color/black"
+      android:paddingVertical="5dp"
+      android:paddingHorizontal="25dp"
+      android:background="@drawable/border"
+      android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/countrydata_textviewcountrypopulation"
+        android:layout_below="@id/countrydata_edittextsearch"
+        android:layout_alignParentRight="true"
+        android:text="POPULATION"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:paddingVertical="5dp"
+        android:paddingHorizontal="25dp"
+        android:background="@drawable/border"
+        android:layout_margin="5dp"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/countrydata_textviewcountry">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/countrydata_recyclerview"/>
+    </ScrollView>
+
+</RelativeLayout>
